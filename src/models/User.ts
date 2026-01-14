@@ -12,6 +12,7 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
       trim: true,
+      minLength: 10,
     },
     email: {
       type: String,
@@ -23,7 +24,7 @@ const userSchema = new Schema<IUser>(
     password: {
       type: String,
       required: true,
-      select: false, // 👈 critical: never return password by default
+      select: false, 
     },
   },
   {
