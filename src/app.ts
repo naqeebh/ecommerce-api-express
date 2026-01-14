@@ -5,9 +5,14 @@ import userRouter from "./routers/userRouter";
 
 const app = express();
 
-app.use("/users", userRouter);
 app.use(cors());
 app.use(express.json());
+
+app.get("/ping", (_req, res) => {
+  res.send("pong");
+});
+
+app.use("/users", userRouter);
 
 app.get("/health", (_req, res) => {
   res.json({ status: "ok" });
