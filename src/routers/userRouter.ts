@@ -12,6 +12,7 @@ import { validateObjectId } from "../middleware/validateObjectId";
 
 const router = Router();
 
+// POST USERS 
 router.post("/", validate(createUserSchema), createUser);
 router.get("/", getUsers);
 
