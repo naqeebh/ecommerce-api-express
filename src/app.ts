@@ -19,8 +19,6 @@ app.get("/health", (_req, res) => {
   res.json({ status: "ok" });
 });
 
-// must be last:
 app.use(errorHandler);
-
 
 export default app;
